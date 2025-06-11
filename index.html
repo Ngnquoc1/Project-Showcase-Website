@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Quản lý Giải đấu Bóng đá - Đồ án Nhóm</title>
+    <meta name="description" content="Website showcase dự án nhóm sinh viên về Hệ thống Quản lý Giải đấu Bóng đá">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-futbol"></i>
+                <span>FootballManager Pro</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                <li><a href="#overview" class="nav-link">Tổng quan</a></li>
+                <li><a href="#team" class="nav-link">Nhóm</a></li>
+                <li><a href="#contract" class="nav-link">Hợp đồng</a></li>
+                <li><a href="#progress" class="nav-link">Tiến độ</a></li>
+                <li><a href="#design" class="nav-link">Thiết kế</a></li>
+                <li><a href="#meetings" class="nav-link">Họp nhóm</a></li>
+                <li><a href="#deliverables" class="nav-link">Sản phẩm</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="football-pattern"></div>
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="bg-shape shape-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Đồ án JAVA</div>
+                <h1 class="hero-title">
+                    Hệ thống Quản lý <span class="gradient-text">Giải đấu Bóng đá</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Ứng dụng web toàn diện để quản lý giải đấu bóng đá từ đăng ký đội bóng, 
+                    lập lịch thi đấu đến theo dõi kết quả và thống kê chi tiết.
+                </p>
+                <div class="hero-info">
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <span>Nhóm: <strong>QuackQuack</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-university"></i>
+                        <span>Trường: <strong>Đại học Công nghệ Thông tin</strong></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Học kỳ: <strong>2/2024-2025</strong></span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('deliverables')">
+                        <i class="fas fa-play"></i>
+                        Xem Demo
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('overview')">
+                        <i class="fas fa-info-circle"></i>
+                        Tìm hiểu thêm
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="app-preview">
+                    <img src="/Image/app-screenshoot.png" alt="Football App Preview" class="app-screenshot">
+                    <div class="floating-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-trophy"></i>
+                            <div class="stat-info">
+                                <h3>10+</h3>
+                                <p>Giải đấu</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-users"></i>
+                            <div class="stat-info">
+                                <h3>100+</h3>
+                                <p>Đội bóng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="overview" class="overview">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <h2 class="section-title">Tổng quan Dự án</h2>
+                <p class="section-subtitle">Hiểu rõ về mục tiêu, phạm vi và tác động của hệ thống quản lý giải đấu bóng đá</p>
+            </div>
+            
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h3>Mục tiêu Dự án</h3>
+                    <ul class="objectives-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            xây dựng một hệ thống quản lý giải bóng đá hiện đại, dễ sử dụng
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Tự động hóa các tác vụ quan trọng, hỗ trợ người dùng trong việc quản lý dữ liệu cầu thủ, câu lạc bộ, lịch thi đấu và kết quả từng trận một cách tập trung và chính xác.
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Có tính ứng dụng thực tiễn cao trong mọi môi trường tổ chức thể thao từ phong trào, bán chuyên nghiệp đến chuyên nghiệp                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Mong muốn góp phần số hóa quy trình vận hành giải đấu một cách hiệu quả, minh bạch và linh hoạt.
+                        </li>
+                    </ul>
+                    
+                    <div class="project-scope">
+                        <h3>Phạm vi Dự án</h3>
+                        <p>
+                            Hệ thống được thiết kế để phục vụ các giải đấu bóng đá ở nhiều cấp độ khác nhau, 
+                            từ giải đấu học sinh, sinh viên đến các giải đấu chuyên nghiệp tại địa phương. 
+                            Đề tài tập trung phát triển các chức năng cốt lõi của hệ thống quản lý giải bóng đá. 
+                            Hệ thống cũng hỗ trợ phân quyền cho các vai trò như ban tổ chức giải đấu, ban tổ chức thi đấu, 
+                            ban phân tích và tổng hợp kết quả, ban quản lý CLB và người dùng tra cứu. 
+                            Ngoài ra, đề tài cũng đảm bảo các yêu cầu phi chức năng như: giao diện dễ sử dụng, 
+                            hệ thống ổn định, bảo mật và có khả năng mở rộng trong tương lai. 
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="overview-features">
+                    <h3>Tính năng Chính</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-trophy"></i>
+                                
+                            </div>
+                            <h4>Quản lý giải đấu, vòng đấu</h4>
+                            <p>Quản lý thông tin giải đấu, vòng đấu và các qui định của giải đấu</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Quản lý Đội bóng</h4>
+                            <p>Đăng ký, cập nhật thông tin đội bóng, sân vận động và quản lý danh sách cầu thủ</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4>Lập lịch Thi đấu và Cập nhật kết quả trận đấu</h4>
+                            <p>Dễ dàng tạo lịch thi đấu theo dõi và cập nhật kết quả trận đấu</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h4>Bảng xếp hạng</h4>
+                            <p>Tính toán và hiển thị bảng xếp hạng tự động</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-label">Đội bóng</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="20">0</div>
+                    <div class="stat-label">Giải đấu</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Cầu thủ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Trận đấu</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h2 class="section-title">Đội ngũ Phát triển</h2>
+                <p class="section-subtitle">Gặp gỡ những thành viên đằng sau dự án Football Manager Pro</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="/Image/member1.jpg" alt="Nguyễn Như Quốc">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Nguyễn Như Quốc</h3>
+                        <p class="member-role">Team Leader & Backend,Frontend Developer</p>
+                        <p class="member-description">
+                            Chịu trách nhiệm quản lý dự án, phát triển cơ sở dữ liệu, frontend và backend. 
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">JAVA</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Oracle</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="Image/member2.jpg" alt="Lý Phương Linh">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Lý Phương Linh</h3>
+                        <p class="member-role">Backend Developer & Tester</p>
+                        <p class="member-description">
+                            Phát triển CSDL và backend. 
+                            Thực hiện kiểm thử phần mềm.
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">JAVA</span>
+                            <span class="skill-tag">Oracle</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="/placeholder.svg?height=200&width=200&text=Member+3" alt="Tôn Đại Quốc">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Tôn Đại Quốc</h3>
+                        <p class="member-role">UI/UX Designer and Frontend Developer</p>
+                        <p class="member-description">
+                            Thiết kế giao diện người dùng và phát triển frontend.
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">JAVA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="/placeholder.svg?height=200&width=200&text=Member+4" alt="Nguyễn Lê Phú Quý">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Nguyễn Lê Phú Quý</h3>
+                        <p class="member-role">Frontend & Backend Developer</p>
+                        <p class="member-description">
+                            Phát triển frontend và backend.                            
+                        </p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Oracle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-info">
+                <div class="team-card">
+                    <h3>Thông tin Nhóm</h3>
+                    <div class="team-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Tên nhóm:</span>
+                            <span class="detail-value">QuackQuack</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Thành lập:</span>
+                            <span class="detail-value">Tháng 3, 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Lớp:</span>
+                            <span class="detail-value">IS216.P23</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">GVHD:</span>
+                            <span class="detail-value">Tạ Việt Phương</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Contract -->
+    <section id="contract" class="contract">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h2 class="section-title">Hợp đồng Nhóm</h2>
+                <p class="section-subtitle">Các thỏa thuận và quy tắc làm việc để đảm bảo sự hợp tác hiệu quả</p>
+            </div>
+            
+            <div class="contract-content">
+                <div class="contract-rules">
+                    <h3>Quy tắc Làm việc</h3>
+                    <div class="rules-list">
+                        <div class="rule-item">
+                            <div class="rule-number">1</div>
+                            <div class="rule-content">
+                                <h4>Giao tiếp</h4>
+                                <p>Thành viên phải phản hồi tin nhắn trong vòng 24 giờ và tham dự đầy đủ các cuộc họp đã lên lịch.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">2</div>
+                            <div class="rule-content">
+                                <h4>Deadline</h4>
+                                <p>Tất cả nhiệm vụ được giao phải hoàn thành trước deadline 12 giờ để có thời gian review.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">3</div>
+                            <div class="rule-content">
+                                <h4>Chất lượng Code</h4>
+                                <p>Mọi code phải được review bởi ít nhất một thành viên khác trước khi merge vào main branch.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">4</div>
+                            <div class="rule-content">
+                                <h4>Giải quyết Xung đột</h4>
+                                <p>Bất đồng sẽ được giải quyết thông qua thảo luận nhóm và bỏ phiếu nếu cần thiết.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">5</div>
+                            <div class="rule-content">
+                                <h4>Trách nhiệm</h4>
+                                <p>Thành viên không thể hoàn thành deadline phải thông báo cho nhóm trước ít nhất 24 giờ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contract-details">
+                    <div class="contract-card">
+                        <h3>Chi tiết Hợp đồng</h3>
+                        <div class="contract-info">
+                            <div class="info-row">
+                                <span class="info-label">Ngày tạo:</span>
+                                <span class="info-value">03/03/2024</span>
+                            </div>
+                        </div>
+                        <h3>Lịch Họp</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Họp nhóm hàng tuần: Thống nhất ít nhất: 2 tuần/1 lần</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Sync phát triển: Thứ 4, 14:00</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Review thiết kế: Thứ 6, 10:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </section>
+
+    <!-- Progress Tracking -->
+    <section id="progress" class="progress">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h2 class="section-title">Tiến độ Dự án</h2>
+                <p class="section-subtitle">Theo dõi tiến độ hàng tuần và các mốc quan trọng của dự án</p>
+            </div>
+            
+            <div class="progress-tabs">
+                <button class="tab-btn active" onclick="showTab('timeline')">Timeline</button>
+            </div>
+            
+            <div class="tab-content active" id="timeline">
+                <div class="overall-progress">
+                    <h3>Tiến độ Tổng thể</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="99"></div>
+                        <span class="progress-text">99%</span>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Giai đoạn 1: Khởi động Dự án</h4>
+                            <p class="timeline-date">03-04/03/2025</p>
+                            <ul>
+                                <li>Thành lập nhóm và xác định dự án</li>
+                                <li>Đặt mục tiêu và phạm vi dự án</li>
+                                <li>Xác định các công cụ sử dụng, tính ứng dụng của dự án</li>
+                                <li>Nghiên cứu ban đầu về hệ thống quản lý giải đấu</li>
+                                <li>Tạo và ký hợp đồng nhóm</li>
+                            </ul>
+                            <span class="status-badge completed">Hoàn thành</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Giai đoạn 2: Xác định và Phân tích Yêu cầu</h4>
+                            <p class="timeline-date">05-19/03/2025</p>
+                            <ul>
+                                <li>Khảo sát hiện trạng</li>
+                                <li>Phân tích yêu cầu</li>
+                                <li>Tài liệu hóa yêu cầu</li>
+                                <li>Tìm hiểu, nghiên cứu sâu các công nghệ sử dụng</li>
+                                <li>Thiết kế kiến trúc ban đầu</li>
+                            </ul>
+                            <span class="status-badge completed">Hoàn thành</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Giai đoạn 3: Phân tích và thiết kế hệ thống</h4>
+                            <p class="timeline-date">20/03 - 25/03/2025</p>
+                            <ul>
+                                <li>Vẽ sơ đồ UseCase</li>
+                                <li>Vẽ sơ đồ hoạt động và sơ đồ luồng dữ liệu (Activity & Sequence Diagram)</li>
+                                <li>Vẽ sơ đồ Lớp (Class Diagram) </li>
+                                <li>Vẽ sơ đồ mô hình quan hệ dữ liệu (ERD)</li>
+                                
+                            </ul>
+                            <span class="status-badge completed">Hoàn thành</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Giai đoạn 4: Thiết kế cơ sở dữ liệu và giao diện người dùng</h4>
+                            <p class="timeline-date">26/03 - 31/03/2025</p>
+                            <ul>
+                                <li>Thiết kế cơ sở dữ liệu</li>
+                                <li>Thiết kế giao diện người dùng (UI/UX)</li>
+                            </ul>
+                            <span class="status-badge completed">Hoàn thành</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Giai đoạn 5: Phát triển chức năng chính hệ thống</h4>
+                            <p class="timeline-date">01/04-03/06/2025</p>
+                            <ul>
+                                <li>Triển khai cơ sở dữ liệu</li>
+                                <li>Phát triển giao diện phần mềm</li>
+                                <li>Phát triển các chức năng hệ thống đã đặc tả</li>
+                                <li>Liên kết với Cơ sở dữ liệu</li>
+                                <li>Thiết lập phân quyền chức năng người dùng</li>
+                            </ul>
+                            <span class="status-badge completed">Hoàn thành</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Giai đoạn 6: Kiểm thử và biên soạn tài liệu</h4>
+                            <p class="timeline-date">04-11/06/2025</p>
+                            <ul>
+                                <li>Kiểm thử từng chức năng</li>
+                                <li>Kiểm thử cả hệ thống</li>
+                                <li>Biên soạn tài liệu hướng dẫn sử dụng</li>
+                                <li>Viết báo cáo dự án</li>
+                            </ul>
+                            <span class="status-badge completed">Hoàn thành</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- UI/UX Design -->
+    <section id="design" class="design">
+        <div class="container" style="position: relative; min-height: 350px;">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h2 class="section-title">Thiết kế UI/UX</h2>
+            </div>
+            <!-- Hình ảnh background -->
+            <div style="position: relative;">
+                <img src="/Image/field.jpg" 
+                     alt="UI/UX Design Background" 
+                     style="width: 100%; height: 350px; object-fit: cover; border-radius: 16px; display: block; opacity: 0.8;">
+                <!-- Nút bấm nổi trên hình ảnh -->
+                <a href="https://www.figma.com/file/your-figma-link" target="_blank" 
+                   class="btn btn-primary" 
+                   style="position: absolute; top: 24px; left: 50%; transform: translate(-50%,300%); z-index: 2; ">
+                    <i class="fas fa-external-link-alt"></i>
+                    Xem Figma Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meeting Minutes -->
+    <section id="meetings" class="meetings">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h2 class="section-title">Biên bản Họp</h2>
+                <p class="section-subtitle">Tài liệu các cuộc thảo luận và quyết định của nhóm</p>
+            </div>
+            
+            
+            <div class="meeting-content active" id="archive">
+                <div class="archive-grid">
+                    <div class="archive-month">
+                        <h3>Tháng 3/2025</h3>
+                        <ul>
+                            <li>
+                                <span class="meeting-title">Họp khởi động dự án</span>
+                                <span class="meeting-date-inline">03/03</span>
+                                <button class="download-btn" data-file="/Meeting-report/bienban1.docx"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp xác định và phân tích yêu cầu (lần 1)</span>
+                                <span class="meeting-date-inline">05/03</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp xác định và phân tích yêu cầu (lần 2)</span>
+                                <span class="meeting-date-inline">12/03</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp tổng kết phân tích & Thiết kế sơ đồ</span>
+                                <span class="meeting-date-inline">20/03</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp tiến hành thiết kế CSDL và Giao diện</span>
+                                <span class="meeting-date-inline">26/03</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="archive-month">
+                        <h3>Tháng 4/2025</h3>
+                        <ul>
+                            <li>
+                                <span class="meeting-title">Họp phát triển giao diện và xử lý chức năng liên quan đến quản lý giải đấu</span>
+                                <span class="meeting-date-inline">01/04</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp phát triển giao diện và xử lý chức năng liên quan đến quản lý câu lạc bộ</span>
+                                <span class="meeting-date-inline">10/04</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp phát triển giao diện và xử lý chức năng liên quan đến quản lý cầu thủ</span>
+                                <span class="meeting-date-inline">21/04</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp phát triển giao diện và xử lý chức năng liên quan đến quản lý trận đấu</span>
+                                <span class="meeting-date-inline">30/04</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="archive-month">
+                        <h3>Tháng 5/2025</h3>
+                        <ul>
+                            <li>
+                                <span class="meeting-title">Họp phát triển giao diện và xử lý chức năng liên quan đến quản lý kết quả trận đấu</span>
+                                <span class="meeting-date-inline">09/05</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp phát triển giao diện và xử lý chức năng liên quan đến quản đăng ký thi đấu & phân quyền chức năng</span>
+                                <span class="meeting-date-inline">20/05</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp tổng kết phát triển chức năng hệ thống</span>
+                                <span class="meeting-date-inline">30/05</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="archive-month">
+                        <h3>Tháng 6/2025</h3>
+                        <ul>
+                            <li>
+                                <span class="meeting-title">Họp kiểm thử và biên soạn tài liệu báo cáo</span>
+                                <span class="meeting-date-inline">04/06</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                            <li>
+                                <span class="meeting-title">Họp tổng kết dự án</span>
+                                <span class="meeting-date-inline">11/06</span>
+                                <button class="download-btn"><i class="fas fa-download"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+   <!-- Deliverables -->
+    <section id="deliverables" class="deliverables">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2 class="section-title">Sản phẩm Dự án</h2>
+                <p class="section-subtitle">Khám phá chi tiết các chức năng và tính năng của hệ thống quản lý giải đấu bóng đá</p>
+            </div>
+            
+            <div class="features-tabs">
+                <button class="feature-tab active" onclick="showFeatureTab('feature-overview')">Tổng quan</button>
+                <button class="feature-tab" onclick="showFeatureTab('sign-in')">Đăng nhập & Đăng xuất</button>
+                <button class="feature-tab" onclick="showFeatureTab('tournament-management')">Quản lý Giải đấu</button>
+                <button class="feature-tab" onclick="showFeatureTab('team-management')">Quản lý Đội bóng</button>
+                <button class="feature-tab" onclick="showFeatureTab('player-management')">Quản lý Cầu thủ</button>
+                <button class="feature-tab" onclick="showFeatureTab('match-management')">Quản lý Trận đấu</button>
+                <button class="feature-tab" onclick="showFeatureTab('statistics')">Thống kê & Báo cáo</button>
+            </div>
+            
+            <!-- Overview Tab -->
+            <div class="feature-content active" id="feature-overview">
+                <div class="deliverables-grid" style="grid-template-columns: 1fr;">
+    <div class="deliverable-card main-demo" style="margin-bottom: 2.5rem;">
+        <div class="card-header" style="text-align:center;">
+            <h3 style="font-size:2rem;">Demo Trực tiếp</h3>
+            <p style="font-size:1.1rem;">Prototype tương tác của hệ thống quản lý giải đấu bóng đá</p>
+        </div>
+        <div class="demo-preview" style="position:relative; background:#000; border-radius:16px; max-width:900px; margin:0 auto;">
+            <video id="mainDemoVideo" controls poster="/Image/demo_screenshot.png" style="width:100%;max-height:600px;display:block;border-radius:16px;">
+                <source src="/videos/VideoDemo.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
+            <div class="play-overlay" id="mainDemoPlayOverlay" style="cursor:pointer;"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="card-content" style="text-align:center;">
+            <p style="font-size:1.1rem;">
+                Trải nghiệm hệ thống quản lý giải đấu bóng đá thực tế.<br>
+                Demo bao gồm quản lý đội bóng, lập lịch thi đấu, và theo dõi kết quả.
+            </p>
+        </div>
+    </div>
+    <div class="deliverable-card" style="max-width:900px;margin:0 auto;">
+        <div class="card-header" style="text-align:center;">
+            <h3 style="font-size:1.3rem;">Source Code</h3>
+        </div>
+        <div class="card-content" style="text-align:center;">
+            <a href="https://github.com/your-repo-link" target="_blank" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:1.1rem;">
+                <i class="fab fa-github"></i>
+                Xem trên GitHub
+            </a>
+        </div>
+    </div>
+</div>
+            </div>
+
+            <!-- Sign-in Tab -->
+            <div class="feature-content" id="sign-in">
+                <div class="feature-showcase">
+                    <div class="feature-showcase-header">
+                        <h3>Đăng nhập và Đăng xuất</h3>
+                        <p>Hệ thống xác thực người dùng với các quyền truy cập khác nhau</p>
+                    </div>
+                    <div class="feature-slides">
+                        <div class="feature-slide active">
+                            <img src="/Image/feature/loginPage.png" alt="Đăng nhập">
+                            <div class="slide-caption">Giao diện đăng nhập đơn giản và dễ sử dụng.</div>
+                        </div>
+                        <div class="feature-slide">
+                            <img src="/Image/feature/logoutPage.png" alt="Đăng xuất">
+                            <div class="slide-caption">Giao diện đăng xuất đơn giản và dễ sử dụng.</div>
+                        </div>
+                        <button class="slide-btn prev" onclick="plusFeatureSlide('sign-in', -1)">&#10094;</button>
+                        <button class="slide-btn next" onclick="plusFeatureSlide('sign-in', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tournament Management Tab -->
+            <div class="feature-content" id="tournament-management">
+                <div class="feature-showcase">
+                    <div class="feature-showcase-header">
+                        <h3>Quản lý Giải đấu</h3>
+                        <p>Hệ thống tạo và quản lý các giải đấu bóng đá với nhiều định dạng khác nhau</p>
+                    </div>
+                    <div class="feature-slides">
+                            <div class="feature-slide active">
+                                <img src="Image/feature/tournamentPage.png" alt="Quản lý giải đấu">
+                                <div class="slide-caption">Tạo/ Cập nhật/ Xóa giải đấu mới với các thông tin cơ bản.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="Image/feature/roundPage.png" alt="Quản lý vòng đấu">
+                                <div class="slide-caption">Tạo/ Cập nhật/ Xóa các vòng đấu cho giải đấu với các thông tin cơ bản.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="Image/feature/rulePage.png" alt="Quản lý quy định">
+                                <div class="slide-caption">Điều chỉnh quy định giải đấu, bao gồm quy định về số lượng cầu thủ và cách tính điểm xếp hạng</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="Image/feature/registration.png" alt="Quản lý đăng ký">
+                                <div class="slide-caption">Thực hiện đăng ký/ hủy đăng ký danh sách cầu thủ của CLB thi đấu tại giải đấu cụ thể.</div>
+                            </div>
+                            <button class="slide-btn prev" onclick="plusFeatureSlide('tournament-management', -1)">&#10094;</button>
+                            <button class="slide-btn next" onclick="plusFeatureSlide('tournament-management', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Management Tab -->
+            <div class="feature-content" id="team-management">
+                <div class="feature-showcase">
+                    <div class="feature-showcase-header">
+                        <h3>Quản lý Đội bóng</h3>
+                        <p>Hệ thống quản lý toàn diện thông tin về các đội bóng tham gia giải đấu</p>
+                    </div>
+                    <div class="feature-slides">
+                            <div class="feature-slide active">
+                                <img src="/Image/feature/club1.png" alt="Tra cứu đội bóng">
+                                <div class="slide-caption">Tra cứu thông tin đội bóng.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/club2.png" alt="Thông tin chi tiết đội bóng">
+                                <div class="slide-caption">Hiển thị thông tin chi tiết đội bóng.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/club3.png" alt="Quản lý thông tin đội bóng">
+                                <div class="slide-caption">Thêm/ Cập nhật/ Xóa thông tin đội bóng</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/club5.png" alt="Thêm thông tin sân thi đấu">
+                                <div class="slide-caption">Lựa chọn sân thi đấu</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/club4.png" alt="Quản lý thông tin sân nhà">
+                                <div class="slide-caption">Quản lý thông tin về sân vận động</div>
+                            </div>
+                            <button class="slide-btn prev" onclick="plusFeatureSlide('team-management', -1)">&#10094;</button>
+                            <button class="slide-btn next" onclick="plusFeatureSlide('team-management', 1)">&#10095;</button>
+                        </div>
+                </div>
+            </div>
+            <!-- Player Management Tab -->
+            <div class="feature-content" id="player-management">
+                <div class="feature-showcase">
+                    <div class="feature-showcase-header">
+                        <h3>Quản lý Cầu thủ</h3>
+                        <p>Hệ thống quản lý thông tin chi tiết về cầu thủ và theo dõi hiệu suất</p>
+                    </div>
+                    <div class="feature-slides">
+                        <div class="feature-slide active">
+                                <img src="/Image/feature/player1.png" alt="Tra cứu cầu thủ">
+                                <div class="slide-caption">Tìm kiếm cầu thủ theo tên, đội bóng hoặc vị trí.</div>
+                            </div>
+                            <div class="feature-slide active">
+                                <img src="/Image/feature/player2.png" alt="Hồ sơ cầu thủ">
+                                <div class="slide-caption">Hiển thị thông tin chi tiết cầu thủ.</div>
+                            </div>
+                            <div class="feature-slide active">
+                                <img src="/Image/feature/player3.png" alt="Hồ sơ cầu thủ">
+                                <div class="slide-caption">Tạo và quản lý hồ sơ cầu thủ với thông tin cá nhân, vị trí thi đấu.</div>
+                            </div>
+                        
+                        <button class="slide-btn prev" onclick="plusFeatureSlide('player-management', -1)">&#10094;</button>
+                        <button class="slide-btn next" onclick="plusFeatureSlide('player-management', 1)">&#10095;</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Match Management Tab -->
+            <div class="feature-content" id="match-management">
+                <div class="feature-showcase">
+                    <div class="feature-showcase-header">
+                        <h3>Quản lý Trận đấu</h3>
+                        <p>Hệ thống lập lịch, theo dõi và cập nhật kết quả trận đấu theo thời gian thực</p>
+                    </div>
+                    <div class="feature-slides">
+                            <div class="feature-slide active">
+                                <img src="/Image/feature/fixture1.png" alt="Dashboard tổng quan trận đấu">
+                                <div class="slide-caption">Hiển thị tổng quan tất cả trận đấu, có thể tìm kiếm theo đội bóng, cầu thủ hoặc giải đấu.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/fixture2.png" alt="Thông tin trận đấu">
+                                <div class="slide-caption">Hiển thị thông tin chi tiết về từng trận đấu.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/fixture3.png" alt="Quản lý thông tin trận đấu">
+                                <div class="slide-caption">Quản lý thông tin về trận đấu: Thêm/Cập nhật/Xóa thông tin trận đấu.</div>
+                            </div>
+                            <div class="feature-slide active">
+                                <img src="/Image/feature/result1.png" alt="Dashboard tổng quan kết quả trận đấu">
+                                <div class="slide-caption">Hiển thị tổng quan kết quả tất cả trận đấu, có thể tìm kiếm theo đội bóng, cầu thủ hoặc giải đấu.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/result2.png" alt="Thông tin kết quả trận đấu">
+                                <div class="slide-caption">Hiển thị thông tin chi tiết bàn thắng của từng kết quả trận đấu.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/result3.png" alt="Quản lý thông tin kết quả trận đấu">
+                                <div class="slide-caption">Quản lý thông tin về kết quả trận đấu: Cập nhật thông tin kết quả trận đấu(bao gồm những trận đấu đã được cập nhật và chưa cập nhật kết quả)/ Xóa kết quả trận đấu.</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/goal.png" alt="Quản lý thông tin bàn thắng cho kết quả trận đấu">
+                                <div class="slide-caption">Quản lý thông tin về bàn thắng của kết quả trận đấu: Cập nhật thông tin bàn thắng của kết quả trận đấu -> Tỷ số trận đấu sẽ tự động cạp nhật theo số bàn thắng mỗi đội</div>
+                            </div>
+                            <button class="slide-btn prev" onclick="plusFeatureSlide('match-management', -1)">&#10094;</button>
+                            <button class="slide-btn next" onclick="plusFeatureSlide('match-management', 1)">&#10095;</button>
+                    </div>                      
+                </div>
+            </div>
+            <!-- Statistics Tab -->
+            <div class="feature-content" id="statistics">
+                <div class="feature-showcase">
+                    <div class="feature-showcase-header">
+                        <h3>Thống kê & Báo cáo</h3>
+                        <p>Hệ thống phân tích dữ liệu và tạo báo cáo chi tiết về giải đấu, đội bóng và cầu thủ</p>
+                    </div>
+                    <div class="feature-slides">
+                            <div class="feature-slide active">
+                                <img src="/Image/feature/ranking1.png" alt="BXH CLUB">
+                                <div class="slide-caption">Hiển thị tổng quan Bảng xếp hạng đội bóng theo giải đấu</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/ranking2.png" alt="BXH CẦU THỦ">
+                                <div class="slide-caption">Hiển thị tổng quan Bảng xếp hạng vua phá lưới theo giải đấu</div>
+                            </div>
+                            <div class="feature-slide">
+                                <img src="/Image/feature/ranking3.png" alt="BXH THỐNG KÊ">
+                                <div class="slide-caption">Hiển thị tổng quan thống kê điểm số, số bàn thắng, thua và hiệu số các đội bóng theo giải đấu</div>
+                            </div>
+                            <button class="slide-btn prev" onclick="plusFeatureSlide('statistics', -1)">&#10094;</button>
+                            <button class="slide-btn next" onclick="plusFeatureSlide('statistics', 1)">&#10095;</button>
+                    </div>                        
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-pattern"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-futbol"></i>
+                        <span>FootballManager Pro</span>
+                    </div>
+                    <p>Hệ thống Quản lý Giải đấu Bóng đá - Đồ án Tốt nghiệp</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Dự án</h4>
+                    <ul>
+                        <li><a href="#overview">Tổng quan</a></li>
+                        <li><a href="#team">Nhóm</a></li>
+                        <li><a href="#progress">Tiến độ</a></li>
+                        <li><a href="#deliverables">Sản phẩm</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Tài nguyên</h4>
+                    <ul>
+                        <li><a href="#">Tài liệu</a></li>
+                        <li><a href="#">GitHub Repository</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li>Đại học Công nghệ Thông tin</li>
+                        <li>Khoa Công nghệ Phần mềm</li>
+                        <li>nhuquoc1104@gmail.com</li>
+                        <li>+00000000000</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuackQuack Developers Team. Đây là dự án đại học cho mục đích giáo dục.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
