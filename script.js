@@ -478,18 +478,22 @@ document.querySelectorAll(".download-btn").forEach((btn) => {
 document.querySelectorAll(".play-overlay").forEach((overlay) => {
   overlay.addEventListener("click", () => {
     const demoVideo = document.getElementById('mainDemoVideo');
+    const demoIframe = document.getElementById('mainDemoIframe');
     if (demoVideo) {
       demoVideo.play();
-      overlay.style.display = 'none'; // Hide overlay when video plays
-    }
-    // Optional: Show overlay again if video is paused and at start
-    demoVideo.addEventListener('pause', function() {
+      overlay.style.display = 'none';
+      demoVideo.addEventListener('pause', function onPause() {
         if (demoVideo.currentTime === 0 || demoVideo.ended) {
-            overlay.style.display = '';
+          overlay.style.display = '';
         }
-    });
-  })
-})
+        demoVideo.removeEventListener('pause', onPause);
+      });
+    } else if (demoIframe) {
+      demoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      overlay.style.display = 'none';
+    }
+  });
+});
 
 
 // Initialize all functionality when DOM is loaded
