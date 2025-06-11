@@ -1,5 +1,4 @@
 // script.js
-
 // Initialize AOS (Animate On Scroll)
 if (typeof AOS !== "undefined") {
   AOS.init({
@@ -270,6 +269,23 @@ window.addEventListener("load", () => {
     typeWriter(heroTitle, originalText, 50)
   }
 })
+function typeWriter(element, html, speed = 100) {
+  let i = 0
+  let isTag = false
+  let text = ""
+  function type() {
+    if (i < html.length) {
+      if (html[i] === "<") isTag = true
+      text += html[i]
+      if (html[i] === ">") isTag = false
+      element.innerHTML = text
+      i++
+      setTimeout(type, isTag ? 0 : speed)
+    }
+  }
+  element.innerHTML = ""
+  type()
+}
 
 // Counter animation for statistics
 function animateCounters() {
